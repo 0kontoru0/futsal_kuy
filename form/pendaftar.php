@@ -8,12 +8,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>form pendaftar</title>
+<style>
+ .form{
+        background-color:brown;
+        padding:20px;
+        border-radius:5px;
+    } 
+    input,textarea,select{
+        width:100%;
+        padding:12px 20px;
+        margin:8px 0;
+        display: inline-block;
+        border: solid#ccc;
+        border-radius:4px;
+        box-sizing: border-box;
+    }
+    button{
+        width:100%;
+        background-color: grey;
+        padding:14px 20px;
+        margin:8px 0px;
+        border:none;
+        border-radius:5px;
+        cursor:pointer;
+        font-size:16px;
+        color:white;
+
+    }
+    </style>
+   
+
+
 </head>
 <body>
     <h1>silahkan isi bidang di bawah ini</h1>
     <a href="../logout.php">Back To Home</a>
 
-    <form action="input_data_pendaftar.php" method="post">
+    <form class="form"action="input_data_pendaftar.php" method="post">
 
         <label for="">Id pendaftar</label><br>
         <input type="text" name="id_pendaftar" id="" value="<?= rand(0000,9999)?>" readonly>
@@ -40,7 +71,7 @@
         <label for="">jam selesai</label><br>
         <input type="time" name="jam_selesai" id="">
         <br><br>
-        <label for="">jenis pembayaran</label>
+        <label for="">jenis pembayaran</label>-
         <select name="jenis_pembayaran" id="">-
             <option value="cash">cash</option>
             <option value="Transfer">Transfer</option>
